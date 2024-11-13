@@ -1,0 +1,23 @@
+---
+layout: base
+---
+
+<div class="max-w-screen-lg mx-auto prose">
+  <h1>{{ site.data.config.title | escape }}</h1>
+
+  {{ content }}
+
+  <table class="table-auto mx-auto not-prose">
+    <tr>
+    {%- for card in page.cards -%}
+      <td class="flex-1 flex-col space-y-5 border-1 rounded">
+        {%- assign card_page = site.pages | where: "path", card.path | first -%}
+        <div class="text-xl font-bold">{{ card_page.title }}</div>
+        <div class="text-md italic">{{ card_page.subtitle }}</div>
+        <img class="w-3/4 mx-auto" src="{{ card.image | relative_url }}" />
+        <a class="inline-block button" href="{{ card_page.url | relative_url }}">Learn more</a>
+      </td>
+    {%- endfor -%}
+    </tr>
+  </table>
+</div>

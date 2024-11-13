@@ -1,0 +1,22 @@
+<footer class="p-5">
+  {%- assign config = site.data.config -%}
+  <div class="max-w-fit mx-auto px-1">
+    <h2 class="text-xl">{{ config.title | escape }}</h2>
+
+    <div class="text-sm md:flex">
+      <div class="w-1/2 md:w-full">
+        <ul>
+          <li>
+            {{ config.author | escape }}
+          </li>
+        </ul>
+      </div>
+
+      <div class="w-full">
+        <p>{{- config.description | escape -}}</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
