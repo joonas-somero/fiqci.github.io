@@ -1,9 +1,17 @@
-const path = require('path')
+const path = require('path');
+const fs = require('fs');
+
+const entryFiles = {};
+const rootDir = './src/roots/';
+fs.readdirSync(rootDir).forEach((file) => {
+    if (file.endsWith('.jsx')) {
+        const name = path.parse(file).name; // Use the file name (without extension) as the entry name
+        entryFiles[name] = path.resolve(rootDir, file);
+    }
+});
 
 module.exports = {
-    entry: {
-        status: './src/roots/status.jsx',
-    },
+    entry: entryFiles,
     output: {
       filename: '[name].js',
       path: path.resolve(__dirname, 'dist')
@@ -30,7 +38,15 @@ module.exports = {
                         ]
                     }
                 }
-            }
+            },
+            {
+                test: /\.css$/,
+                use: [
+                  'style-loader',
+                  'css-loader',
+                  'postcss-loader', // For Tailwind and other PostCSS plugins
+                ],
+              },
         ],
     }
 }

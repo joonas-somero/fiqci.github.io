@@ -5,7 +5,6 @@ subtitle: View the status of the Quantum Connections
 react_source_files:
   - status.js
 ---
-
 {%- include react/root.html id='service-status' -%}
 
 ## Upcoming Service breaks

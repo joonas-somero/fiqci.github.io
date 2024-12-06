@@ -5,7 +5,11 @@
 
   <body class="flex flex-col min-h-screen">
 
-    {%- include header.html -%}
+    <script src="/navigation.js"></script>
+    <div id="navigation-header"></div>
+    <script>
+        ReactDOM.render(<NavigationHeader />, document.getElementById('navigation-header'));
+    </script>
 
     <main class="block flex-[1_0]" aria-label="Content">
         {{ content }}

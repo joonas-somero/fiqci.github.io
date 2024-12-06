@@ -8,5 +8,8 @@ collections:
     output: true
 keep_files:
   - status.js
+  - navigation.js
+  - home.js
   - main.css
+  - getStarted.js
 encoding: utf-8
