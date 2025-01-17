@@ -1,0 +1,53 @@
+name: Build and deploy site to GitHub Pages
+on:
+  push:
+    branches: [ "rewrite/main" ]
+  pull_request:
+    branches: [ "rewrite/main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    if: false
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: rewrite/main
+
+      - name: Install Ruby and Node.js using asdf
+        uses: asdf-vm/actions/install@v3.0.2
+
+      - name: Install Ruby gems
+        run: bundle install
+
+      - name: Install Node.js packages
+        run: npm install
+
+      - name: Build site
+        run: npm run build
+
+      - name: Upload artifact
+        id: deployment
+        uses: actions/upload-pages-artifact@3
+        with:
+          path: dist/
+
+  deploy:
+    if: false
+    runs-on: ubuntu-latest
+    needs: build
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@4
