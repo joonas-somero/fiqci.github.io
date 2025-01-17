@@ -77,26 +77,8 @@ npm install
 ```
 
 
-### Serve
+### Serve with live reload
 
-There are no npm scripts or anything of the sort yet, for anything, so three commands, in separate terminals (tabs, or in the background, or however you like) are needed.
-
-1. Tailwind CSS
-
-    ```bash
-    npx tailwindcss --input ./src/stylesheets/main.css --output ./dist/main.css --watch
-    ```
-
-2. Webpack
-
-    ```bash
-    npx webpack --mode=development --watch
-    ```
-
-3. Jekyll
-
-    ```bash
-    bundle exec jekyll serve --livereload
-    ```
+The command `npm run watch` starts Tailwind CSS, Webpack and Jekyll concurrently with the source monitored for changes.
 
 The site should now be ready at `http://localhost:4000`.

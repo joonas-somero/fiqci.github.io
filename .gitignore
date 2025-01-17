@@ -3,3 +3,4 @@
 .jekyll-metadata
 dist
 node_modules
+_config_webpack.yml

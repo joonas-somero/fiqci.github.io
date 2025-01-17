@@ -1,9 +1,10 @@
+{% assign constants = site.data.site-constants %}
 <ul class="not-prose">
   {%- assign posts = include.posts | reverse -%}
-  {%- assign max_excerpt = site.data.config.excerpt_max_length -%}
+  {%- assign max_excerpt = constants.excerpt_max_length | to_integer -%}
   {%- for post in posts -%}
   <li class="mb-5">
-    {%- assign date_format = page.data.config.date_format | default: "%b %-d, %Y" -%}
+    {%- assign date_format = constants.date_format | default: "%b %-d, %Y" -%}
     <span class="text-sm">{{ post.date | date: date_format }}</span>
     <div class="text-lg">
       <a class="block font-medium" href="{{ post.url | relative_url }}">

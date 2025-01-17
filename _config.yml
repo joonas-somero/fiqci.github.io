@@ -1,15 +1,7 @@
-source: content
-destination: dist
+encoding: utf-8
 collections:
   publications:
     output: true
     sort_by: date
   events:
     output: true
-keep_files:
-  - status.js
-  - navigation.js
-  - home.js
-  - main.css
-  - getStarted.js
-encoding: utf-8
