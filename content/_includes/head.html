@@ -7,10 +7,19 @@
   <link rel="icon" href="{{ constants.favicon | relative_url }}" />
   <link rel="stylesheet" href="{{ 'main.css' | relative_url }}">
   {%- include external/mathjax.html -%}
-  {%- unless page.react_source_files == empty -%}
-    {%- assign sources = page.react_source_files | uniq -%}
-    {%- for src in sources -%}
-      <script type="text/javascript" src="{{ src | relative_url }}" charset="utf-8"></script>
-    {%- endfor -%}
+
+  {% assign react_source_files = include.react_source_files %}
+  {% unless layout.react_source_files == empty %}
+    {% for src in layout.react_source_files %}
+      {% assign react_source_files = react_source_files | push: src %}
+    {% endfor %}
+  {% endunless %}
+  {% unless page.react_source_files == empty %}
+    {% for src in page.react_source_files %}
+      {% assign react_source_files = react_source_files | push: src %}
+    {% endfor %}
+  {% endunless %}
+  {%- unless react_source_files == empty %}
+    {%- include react/sources.html sources=react_source_files -%}
   {%- endunless -%}
 </head>

@@ -68,11 +68,11 @@ export const NavigationHeader = () => {
                 
                 <div className="lg:flex flex-wrap justify-end hidden">
                     <NavButton text="Home" href="/" />
-                    <NavButton text="Get started" href="/pages/access.html" />
+                    <NavButton text="Get started" href="/pages/access" />
                     <NavButton text="About" href="/pages/about" />
-                    <NavButton text="Blogs and instructions" href="/pages/publications.html" />
-                    <NavButton text="Status" href="/pages/status.html" />
-                    <NavButton text="Events" href="/pages/events.html" />
+                    <NavButton text="Blogs and instructions" href="/pages/publications" />
+                    <NavButton text="Status" href="/pages/status" />
+                    <NavButton text="Events" href="/pages/events" />
                     <NavSearchButton text="Search" />
                 </div>
                 
@@ -83,11 +83,11 @@ export const NavigationHeader = () => {
             {isOpen && 
                 <div className='lg:hidden mx-1.5 mb-10 top-10 w-full flex flex-col justify-center items-left gap-2' >
                     <NavButton text="Home" href="/" />
-                    <NavButton text="Get started" href="/pages/access.html" />
+                    <NavButton text="Get started" href="/pages/access" />
                     <NavButton text="About" href="/pages/about" />
-                    <NavButton text="Blogs and instructions" href="/pages/publications.html" />
-                    <NavButton text="Status" href="/pages/status.html" />
-                    <NavButton text="Events" href="/pages/events.html" />
+                    <NavButton text="Blogs and instructions" href="/pages/publications" />
+                    <NavButton text="Status" href="/pages/status" />
+                    <NavButton text="Events" href="/pages/events" />
                     <NavSearchButton text="Search" />
                 </div>
             }

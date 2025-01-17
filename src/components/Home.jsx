@@ -44,7 +44,7 @@ export const Home = () => {
                         <h1 className='text-4xl sm:text-6xl md:text-6xl lg:text-6xl xl:text-7xl 2xl:text-8xl pb-5'>
                             Making the power of quantum computing accessible
                         </h1>
-                        <p className='text-md sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl'>FiQCI - Finnish quanntum-computing infrastructure</p>
+                        <p className='text-md sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl'>FiQCI - Finnish quantum-computing infrastructure</p>
                     </div>
                 </div>
 

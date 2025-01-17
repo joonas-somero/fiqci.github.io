@@ -1,15 +1,18 @@
+---
+base_react_sources:
+  - navigation.js
+---
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
-
-  {%- include head.html -%}
+  <html lang="{{ page.lang | default: site.lang | default: "en" }}">
+    {% assign base_react_sources = layout.base_react_sources %}
+    {% for src in layout.react_source_files %}
+      {% assign base_react_sources = base_react_sources | push: src %}
+    {% endfor %}
+    {%- include head.html react_source_files=base_react_sources -%}
 
   <body class="flex flex-col min-h-screen">
 
-    <script src="/navigation.js"></script>
-    <div id="navigation-header"></div>
-    <script>
-        ReactDOM.render(<NavigationHeader />, document.getElementById('navigation-header'));
-    </script>
+    {%- include react/root.html id='navigation-header' -%}
 
     <main class="block flex-[1_0]" aria-label="Content">
         {{ content }}

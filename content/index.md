@@ -1,13 +1,8 @@
 ---
 layout: home
-cards:
-  - path: pages/access.md
-    image: assets/images/access-icon.png
-  - path: pages/publications.md
-    image: assets/images/posts-icon.jpg
-  - path: pages/about.md
-    image: assets/images/about-icon.jpg
+react_source_files:
+  - exampleCards.js
 ---
 
-Open Call for pilot access to Helmi quantum computer now open
-{: .alert}
+{%- include react/root.html id='blog-cards' -%}
+{%- include react/root.html id='event-cards' -%}

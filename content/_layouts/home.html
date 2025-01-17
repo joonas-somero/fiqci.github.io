@@ -1,16 +1,13 @@
 ---
 layout: base
+react_source_files:
+  - home.js
 ---
 
-<script src="/home.js"></script>
-    <div id="home"></div>
-    <script>
-        ReactDOM.render(<Home />, document.getElementById('home'));
-    </script>
-<script src="/getStarted.js"></script>
-    <div id="get-started"></div>
-    <script>
-        ReactDOM.render(<GetStarted />, document.getElementById('get-started'));
-    </script>
+{%- include react/root.html id='home' -%}
+
 <div class="max-w-screen-lg mx-auto prose">
 
+  {{ content }}
+
+</div>
