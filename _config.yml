@@ -1,3 +1,10 @@
+# Another, dynamically generated config file is also present in
+# the build. See 'const jekyllConfig' in 'webpack.config.js' and
+# 'config.jekyll' in 'package.json'.
+#
+# Additionally, some theme-related constants are defined in
+# 'content/_data/site-constants.yml'.
+
 encoding: utf-8
 collections:
   publications:
