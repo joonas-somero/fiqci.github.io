@@ -26,6 +26,12 @@ Instructions at [Getting Started | asdf](https://asdf-vm.com/guide/getting-start
 The file `.tool-versions` contains the version numbers for
   - Ruby: 3.3.5
   - Node.js: v22.10.0
+  
+Install the nodejs plugin with: 
+
+```bash
+asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+```
 
 As instructed in `asdf --help`
 

@@ -4,11 +4,11 @@ import { injectComponent } from '../utils/root'
 
 const exampleBlogs = {
   component: <ExampleComponent text="The blog cards go here" />,
-  rootId: 'blog-cards'
+  rootId: 'example-blog-card'
 }
 const exampleEvents = {
   component: <ExampleComponent text="The event cards go here" />,
-  rootId: 'event-cards'
+  rootId: 'example-event-cards'
 }
 
 /*
