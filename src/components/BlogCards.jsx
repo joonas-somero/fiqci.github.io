@@ -1,5 +1,4 @@
 import React from 'react';
-import { useState } from 'react';
 import '@cscfi/csc-ui-react/css/theme.css';
 import { CCard, CIcon, CCardContent } from '@cscfi/csc-ui-react';
 import { mdiArrowRight } from '@mdi/js';
