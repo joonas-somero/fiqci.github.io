@@ -9,7 +9,8 @@
     "type": "News",
     "title": "{{ blog.title }}",
     "url": "{{ blog.url | relative_url }}",
-    "date": "{{ blog.date | date: '%-d.%-m.%Y' }}"
+    "date": "{{ blog.date | date: '%-d.%-m.%Y' }}",
+    "teaser": "{{blog.header.teaser | relative_url}}" 
   }{%- unless forloop.last == true -%},{%- endunless -%}
 {% endfor %}
 ]

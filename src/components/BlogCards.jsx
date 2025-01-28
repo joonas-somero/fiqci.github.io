@@ -6,7 +6,7 @@ import { mdiArrowRight } from '@mdi/js';
 const BlogCardComponent = props => {
     return (
 <CCard className="flex flex-auto flex-col flex-wrap border border-gray-200 rounded-none shadow-md overflow-hidden hover:shadow-lg p-0 m-0 w-full"> {/* Adjusted card width */}
-            <img src='/assets/images/topology/thumbnail.png' alt="Logo" className="w-full h-28 scale-125 object-cover m-0 p-0" /> {/* Reduced image height */}
+            <img src={props.teaser} alt="Logo" className="w-full h-28 scale-125 object-cover m-0 p-0" /> {/* Reduced image height */}
             <CCardContent className="flex flex-col border-none m-0">
                 <div>
                     <a
