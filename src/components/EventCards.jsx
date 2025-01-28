@@ -13,7 +13,7 @@ const EventCardComponent = props => {
                         href={props.url}
                         className="text-md text-black-500 hover:underline font-bold"
                     >
-                        <div className='flex'>
+                        <div className='flex justify-between'>
                             {props.title}
                             <CIcon className="text-lg" path={mdiOpenInNew} />
                         </div>
