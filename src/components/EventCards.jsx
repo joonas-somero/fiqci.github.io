@@ -6,7 +6,7 @@ import { mdiArrowRight, mdiOpenInNew } from '@mdi/js';
 
 const EventCardComponent = props => {
     return (
-<CCard className="flex flex-auto flex-col flex-wrap border border-gray-200 rounded-none shadow-md hover:shadow-lg p-0 m-0"> {/* Adjusted card width */}
+<CCard className="flex flex-auto flex-col border border-gray-200 rounded-none shadow-md hover:shadow-lg p-0 m-0"> {/* Adjusted card width */}
             <CCardContent className="flex flex-col border-none m-0">
                 <div className='my-3'>
                     <a
@@ -39,8 +39,8 @@ export const EventCard = () => {
                 <h2 className="text-3xl font-bold">Events</h2>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-              { SITE.events.slice(-5).reverse().map(event => <EventCardComponent {...event} />) }
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+              { SITE.events.slice(-4).reverse().map(event => <EventCardComponent {...event} />) }
             </div>
             <div className="mt-4">
             <a
