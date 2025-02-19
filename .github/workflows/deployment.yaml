@@ -24,8 +24,16 @@ jobs:
       - name: Install Node.js packages
         run: npm install
 
-      - name: Build site
-        run: npm run build
+      - name: Build stylesheets using Tailwind CSS
+        run: npm run-script tailwindcss -- --minify
+
+      - name: Build React components using Webpack
+        run: npm run-script webpack -- --mode=production
+
+      - name: Build site using Jekyll
+        env:
+          JEKYLL_ENV: production
+        run: npm run-script jekyll:build -- --baseurl ${{ github.event.repository.name }}
 
       - name: Upload artifact
         id: deployment
